@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    Auction game
+  </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <div class="intro">
+    <div style="color: white;">Play Cricket Auction</div>
+    <div style="color: gold;">With Your Friends</div>
+  </div>
+  <div class="LiveRooms">
+    <button class="btn1" onclick="openbox('create')">Create Room</button>
+    <button class="btn1" onclick="openbox('join')">Join Room</button>           
+  </div>
+  <div id="actionBox" class="actionbox">
+    <div id="boxContent"></div>
+  </div>
+  <script>
+    const canvas = document.getElementById("bg");
+    const ctx = canvas.getContext("2d");
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    const balls = [];
+    const count = 80;
+    
+    for (let i = 0; i < count; i++) {
+      balls.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 2 + 1,
+        dx: (Math.random() - 0.5) * 0.5,
+        dy: (Math.random() - 0.5) * 0.5
+      });
+    }
+    
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "rgb(255, 153, 0)";
+      
+      balls.forEach(b => {
+        b.x += b.dx;
+        b.y += b.dy;
+        
+        if (b.x < 0 || b.x > canvas.width) b.dx *= -1;
+        if (b.y < 0 || b.y > canvas.height) b.dy *= -1;
+        
+        ctx.beginPath();
+        ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+    
+    window.onresize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    const box=document.getElementById("actionBox");
+    const content=document.getElementById("boxContent");
+    function openbox(type){
+      box.style.display="block";
+      if(type==="create"){
+        content.innerHTML=`<p class="croom">Create Room</p>
+        <input placeholder="Room Name"/>
+        <br><br><p class="text2">Choose your team</p>
+        <div class="teams">        
+        <div class="csk">CSK</div>
+        <div class="mi">MI</div>
+        <div class="rcb">RCB</div>
+        <div class="kkr">KKR</div>
+        <div class="srh">SRH</div>
+        <div class="rr">RR</div>
+        <div class="pbks">PBKS</div>
+        <div class="gt">GT</div>
+        <div class="lsg">LSG</div>
+        <div class="dc">DC</div>    
+        </div><br><br>  
+        <button class="btn2">Create</button>`;
+      }
+      if(type==="join"){
+        content.innerHTML=`<p class="croom">Join Room</p>
+        <input placeholder="Room Code"/>
+        <br><br>
+        <button class="btn2">Join</button>`;
+      }
+     
+    }
+  </script>
+  
+</body>
+</html>
