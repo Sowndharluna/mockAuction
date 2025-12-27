@@ -12,7 +12,9 @@ body {
  }
 .intro{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 60px;
+    font-size: 60px;display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     position: relative;
     flex-direction: column;
@@ -25,7 +27,9 @@ body {
     gap: 10px;
 }
 
-  
+  body.modal-open canvas {
+  filter: blur(4px);
+}
   .btn1 {
     padding: 14px 20px;
     font-size: 18px;
@@ -73,8 +77,8 @@ body {
   input{
     background-color: rgba(0, 0, 0, 0.371);
     border:solid yellow 1px;
-    height: 30px;
-    width: 150px;
+    width: 200px;
+    height: 36px;
     border-radius: 5px;
     text-align: center;
     outline: none;
@@ -118,6 +122,18 @@ body {
   align-items: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.csk:hover{
+  opacity: 0.65;
+  transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.csk:active{
+  border: solid yellow 1px;
+  background-color: black;
+  color: yellow;
 }
 .mi{
   background-color: blue;
@@ -130,6 +146,17 @@ body {
   align-items: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.mi:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.mi:active{
+  border: solid blue 1px;
+  background-color: black;
+  color: blue;
 }
 .rcb{
   background-color: red;
@@ -142,6 +169,17 @@ body {
   align-items: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.rcb:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.rcb:active{
+  border: solid red 1px;
+  background-color: black;
+  color: red;
 }
 .kkr{
   background-color: purple;
@@ -154,6 +192,17 @@ body {
   align-items: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.kkr:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.kkr:active{
+  border: solid purple 1px;
+  background-color: black;
+  color: purple;
 }
 .srh{
   background-color: rgb(255, 132, 0);
@@ -166,6 +215,17 @@ body {
   align-items: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.srh:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.srh:active{
+  border: solid rgb(255, 132, 0) 1px;
+  background-color: black;
+  color: rgb(255, 132, 0);
 }
 .rr{
   background-color: rgb(0, 106, 255);
@@ -178,6 +238,17 @@ body {
   align-items: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.rr:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.rr:active{
+  border: solid rgb(0, 106, 255) 1px;
+  background-color: black;
+  color: rgb(0, 106, 255);
 }
 .pbks{
   background-color: rgb(255, 51, 0);
@@ -190,6 +261,17 @@ body {
   align-items: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.pbks:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.pbks:active{
+  border: solid rgb(255, 51, 0) 1px;
+  background-color: black;
+  color: rgb(255, 51, 0);
 }
 .gt{
   background-color: rgb(0, 0, 189);
@@ -202,6 +284,17 @@ body {
   align-items: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.gt:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.gt:active{
+  border: solid rgb(0, 0, 189) 1px;
+  background-color: black;
+  color: rgb(0, 0, 189);
 }
 .lsg{
   background-color: aquamarine;
@@ -214,6 +307,17 @@ body {
   align-items: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.lsg:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.lsg:active{
+  border: solid aquamarine 1px;
+  background-color: black;
+  color: aquamarine;
 }
 .dc{
   background-color: skyblue;
@@ -226,6 +330,17 @@ body {
   align-items: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.dc:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.dc:active{
+  border: solid skyblue 1px;
+  background-color: black;
+  color: skyblue;
 }
 .text2{
   font-family:Arial, Helvetica, sans-serif;
@@ -257,3 +372,8 @@ body {
   .btn2:active {
     transform: scale(0.97);
   }
+  .teams {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
