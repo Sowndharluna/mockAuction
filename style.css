@@ -1,0 +1,379 @@
+body {
+    margin: 0;
+    background: #0b0f14;
+    overflow: hidden;
+    color: white;
+    transition: 0.45s ease-in-out;
+  }
+  canvas {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+ }
+.intro{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+}
+.LiveRooms{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 10px;
+}
+
+  body.modal-open canvas {
+  filter: blur(4px);
+}
+  .btn1 {
+    padding: 14px 20px;
+    font-size: 18px;
+    color: #ffffff;
+    background: rgba(255, 98, 0, 0.75);
+    /*border: 1px solid orangered;*/
+    border: none;
+    border-radius: 14px;
+    backdrop-filter: blur(12px);
+    font-family:monospace;
+    font-weight: bolder;
+
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn1:hover {
+    background: rgba(255, 98, 0, 0.95);
+    transform: translateY(-2px);
+    box-shadow:  0px 2px 8px 1px rgba(255, 208, 0, 0.545);
+    /*border: 1px solid gold;*/
+  }
+  
+  .btn1:active {
+    transform: scale(0.97);
+  }
+  .actionbox {
+    width: fit-content;
+    margin: 20px auto 0;
+    background: #68633f90;
+    border-radius: 14px;
+    padding: 20px;
+    display: none;
+    animation: slideDown 0.3s ease;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid orange 1.5px;
+
+  }
+ .croom{
+  font-size: 30px;
+ }
+  input{
+    background-color: rgba(0, 0, 0, 0.371);
+    border:solid yellow 1px;
+    width: 200px;
+    height: 36px;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+  input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  input::placeholder{
+    font-family: monospace;
+    color: wheat;
+    opacity: 0.8;
+  }  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.teams{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.csk{
+  background-color: yellow;
+  color: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.csk:hover{
+  opacity: 0.65;
+  transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.csk:active{
+  border: solid yellow 1px;
+  background-color: black;
+  color: yellow;
+}
+.mi{
+  background-color: blue;
+  color: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.mi:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.mi:active{
+  border: solid blue 1px;
+  background-color: black;
+  color: blue;
+}
+.rcb{
+  background-color: red;
+  color: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.rcb:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.rcb:active{
+  border: solid red 1px;
+  background-color: black;
+  color: red;
+}
+.kkr{
+  background-color: purple;
+  color: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.kkr:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.kkr:active{
+  border: solid purple 1px;
+  background-color: black;
+  color: purple;
+}
+.srh{
+  background-color: rgb(255, 132, 0);
+  color: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.srh:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.srh:active{
+  border: solid rgb(255, 132, 0) 1px;
+  background-color: black;
+  color: rgb(255, 132, 0);
+}
+.rr{
+  background-color: rgb(0, 106, 255);
+  color: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.rr:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.rr:active{
+  border: solid rgb(0, 106, 255) 1px;
+  background-color: black;
+  color: rgb(0, 106, 255);
+}
+.pbks{
+  background-color: rgb(255, 51, 0);
+  color: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.pbks:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.pbks:active{
+  border: solid rgb(255, 51, 0) 1px;
+  background-color: black;
+  color: rgb(255, 51, 0);
+}
+.gt{
+  background-color: rgb(0, 0, 189);
+  color: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.gt:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.gt:active{
+  border: solid rgb(0, 0, 189) 1px;
+  background-color: black;
+  color: rgb(0, 0, 189);
+}
+.lsg{
+  background-color: aquamarine;
+  color: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.lsg:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.lsg:active{
+  border: solid aquamarine 1px;
+  background-color: black;
+  color: aquamarine;
+}
+.dc{
+  background-color: skyblue;
+  color: black;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.dc:hover{
+  opacity: 0.65;transform: scale(1.05);
+  transform-origin: bottom center;
+}
+.dc:active{
+  border: solid skyblue 1px;
+  background-color: black;
+  color: skyblue;
+}
+.text2{
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+.btn2{
+  width:fit-content;
+  padding: 10px 30px 10px 30px;
+  font-size: 20px;
+  align-items: center;
+  justify-self: center;
+  border: none;
+  border-radius: 12px;
+  color:white;
+  background-color:rgba(255, 98, 0, 0.75);
+  font-weight: bolder;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn2:hover {
+    background: rgba(255, 98, 0, 0.95);
+    transform: translateY(-2px);
+    box-shadow:  0px 2px 8px 1px rgba(255, 208, 0, 0.545);
+    /*border: 1px solid gold;*/
+  }
+  
+  .btn2:active {
+    transform: scale(0.97);
+  }
+  .teams {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
